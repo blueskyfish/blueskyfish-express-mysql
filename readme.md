@@ -3,7 +3,7 @@
 
 # BlueSkyFish Express MySql
 
-> A database connector to mysql server for micro services
+> A database connector and middleware to mysql server for micro services
 
 A middleware for the express microservices
 
