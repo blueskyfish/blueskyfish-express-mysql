@@ -1,0 +1,15 @@
+#
+# BlueSkyFish Express Commons - https://github.com/blueskyfish/blueskyfish-express-mysql.git
+#
+# The MIT License (MIT)
+# Copyright 2018 BlueSkyFish
+#
+
+.idea/
+.vscode/
+
+# post install
+lib/
+
+# Node & Co
+node_modules/
