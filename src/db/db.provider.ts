@@ -29,17 +29,18 @@ export class DBProvider {
 					if (!values) {
 						return query;
 					}
-					const sql = query.replace(/\{([a-zA-Z0-9]+)?\}/g, (text, key) => {
+					const sql = query.replace(/{([a-zA-Z0-9]+)?}/g, (text, key) => {
 						if (values.hasOwnProperty(key)) {
 							const item = values[key];
 							if (Array.isArray(item)) {
+								// concat the values with comma separate
 								return item.map((v) => this._pool.escape(v)).join(',');
 							}
 							return this._pool.escape(values[key]);
 						}
 						return text;
 					});
-					Log.trace(DB_TAG, 'SQL Statemet\n%s', sql);
+					Log.trace(DB_TAG, 'SQL Statement\n%s', sql);
 					return sql;
 				}
 			});
