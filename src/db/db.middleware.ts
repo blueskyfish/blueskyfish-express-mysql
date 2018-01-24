@@ -5,7 +5,8 @@
  * Copyright 2018 BlueSkyFish
  */
 
-import { NextFunction, Request, Response, RequestHandlerParams} from 'express';
+import { RequestHandlerParams } from 'express-serve-static-core';
+import { NextFunction, Request, Response} from 'express';
 
 import { dbProvider } from './db.provider';
 import { IDBConfig } from "./db.models";
