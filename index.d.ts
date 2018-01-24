@@ -5,7 +5,7 @@
  * Copyright 2018 BlueSkyFish
  */
 
-import { RequestHandlerParams } from 'express';
+import { RequestHandlerParams } from 'express-serve-static-core';
 import { Pool } from 'mysql';
 
 declare namespace e {
