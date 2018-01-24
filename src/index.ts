@@ -14,3 +14,4 @@ export {
 export { DBConnection } from './db/db.connection';
 export { DBProvider, dbProvider } from './db/db.provider';
 export { withDB } from './db/db.middleware';
+export { getConnection } from './db/db.util';

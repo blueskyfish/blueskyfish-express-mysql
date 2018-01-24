@@ -53,6 +53,8 @@ declare namespace e {
 	const dbProvider: DBProvider;
 
 	function withDB(config: IDBConfig): RequestHandlerParams
+
+	function getConnection(req: Request): DBConnection;
 }
 
 export = e;
