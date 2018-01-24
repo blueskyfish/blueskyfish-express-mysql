@@ -6,6 +6,7 @@
  */
 
 import { RequestHandlerParams } from 'express-serve-static-core';
+import { Request } from 'express';
 import { Pool } from 'mysql';
 
 declare namespace e {
