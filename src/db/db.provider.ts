@@ -6,11 +6,11 @@
  */
 
 import { createPool, MysqlError, Pool } from 'mysql';
+import { Log, Util, LogLevel } from 'blueskyfish-express-commons';
 
 import { DB_TAG } from './db.defines';
 import { IDBConfig } from "./db.models";
 import { DBConnection } from './db.connection';
-import { Log, Util, compareLevel, LogLevel } from 'blueskyfish-express-commons';
 
 export class DBProvider {
 
@@ -44,8 +44,7 @@ export class DBProvider {
 					return sql;
 				}
 			});
-			console.log('>>>>>> Log.Level=%s', LogLevel[Log.logLevel])
-			console.log('>>>>>> compare %s', compareLevel(LogLevel.Trace, Log.logLevel))
+			// show the configuration of the database connection
 			if (Log.isLevel(LogLevel.Trace)) {
 				Log.trace(DB_TAG, 'Provider initialize\n%s', Util.toJson(config, Util.secretReplacer('password')));
 			}
