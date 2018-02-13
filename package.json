@@ -1,6 +1,6 @@
 {
   "name": "blueskyfish-express-mysql",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A database connector and middleware to mysql server for micro services",
   "author": {
     "name": "BlueSkyFish",
