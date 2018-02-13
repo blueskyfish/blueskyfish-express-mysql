@@ -5,7 +5,7 @@
  * Copyright 2018 BlueSkyFish
  */
 
-import { LogLevel } from 'blueskyfish-express-commons/src/log/log.models';
+import { LogLevel } from 'blueskyfish-express-commons';
 import { createPool, MysqlError, Pool } from 'mysql';
 
 import { DB_TAG } from './db.defines';
