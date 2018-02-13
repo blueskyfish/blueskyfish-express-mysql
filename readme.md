@@ -56,6 +56,7 @@ $ npm install -S blueskyfish-express-mysql
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
+| `0.0.5`    | 2018-01-13 | log db configuration only in Trace log level
 | `0.0.4`    | 2018-01-24 | get database connection from express request.
 | `0.0.2`    | 2018-01-24 | fixed the typescript error for express type.
 | `0.0.1`    | 2018-01-21 | Initial the library. It is extract from my other internal projects.

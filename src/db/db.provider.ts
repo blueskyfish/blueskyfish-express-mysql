@@ -5,6 +5,7 @@
  * Copyright 2018 BlueSkyFish
  */
 
+import { LogLevel } from 'blueskyfish-express-commons/src/log/log.models';
 import { createPool, MysqlError, Pool } from 'mysql';
 
 import { DB_TAG } from './db.defines';
@@ -44,7 +45,9 @@ export class DBProvider {
 					return sql;
 				}
 			});
-			Log.debug(DB_TAG, 'Provider initialize\n%s', Util.toJson(config, Util.secretReplacer('password')));
+			if (Log.isLevel(LogLevel.Trace)) {
+				Log.trace(DB_TAG, 'Provider initialize\n%s', Util.toJson(config, Util.secretReplacer('password')));
+			}
 		}
 	}
 
