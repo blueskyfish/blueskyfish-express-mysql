@@ -28,7 +28,7 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "blueskyfish-express-commons": "0.0.2",
+    "blueskyfish-express-commons": "0.0.9",
     "express": "4.16.2",
     "lodash": "4.17.4",
     "moment": "2.20.1",
