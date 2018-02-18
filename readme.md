@@ -56,6 +56,7 @@ $ npm install -S blueskyfish-express-mysql
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
+| `0.0.9`    | 2018-02-18 | adjust the version of blueskyfish-express-commons
 | `0.0.8`    | 2018-01-13 | log db configuration only in Trace log level
 | `0.0.4`    | 2018-01-24 | get database connection from express request.
 | `0.0.2`    | 2018-01-24 | fixed the typescript error for express type.

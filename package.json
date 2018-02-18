@@ -1,6 +1,6 @@
 {
   "name": "blueskyfish-express-mysql",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A database connector and middleware to mysql server for micro services",
   "author": {
     "name": "BlueSkyFish",
@@ -28,7 +28,7 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "blueskyfish-express-commons": "0.0.9",
+    "blueskyfish-express-commons": "0.0.10",
     "express": "4.16.2",
     "lodash": "4.17.4",
     "moment": "2.20.1",
