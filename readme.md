@@ -38,7 +38,7 @@ app.get('/users', async (req, res) => {
 * [Typescript][typescript] Version 2.6.2 or higher.
 * [Express][express] Version 4.16 or higher
 * [Node MySQL][node-mysql] Version 2.15.0 or higher.
-* [BlueSkyFish Express Commons][bsf-ec] Version 0.0.1 or higher.
+* [BlueSkyFish Express Commons][bsf-ec] Version 0.0.11 or higher.
 
 Global installed typescript. `npm install --global typescript`.
 
@@ -52,10 +52,27 @@ $ npm install -S blueskyfish-express-mysql
 ```
 
 
+## Dependencies
+
+All libraries from **blueskyfish-express-*** and depended applications should use the same version of the dependencies node modules.
+
+| name                    | Version
+|-------------------------|-------------
+| `express`               | `4.16.2`
+| `lodash`                | `4.17.5`
+| `moment`                | `2.20.1`
+| `mysql`                 | `2.15.0`
+|-------------------------|-------------
+| `mocha`                 | `5.0.1`
+| `ts-node`               | `5.0.0`
+| `typescript`            | `2.6.2`
+
+
 ## History
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
+| `0.0.10`   | 2018-02-22 | adjust the version of the depended node modules.
 | `0.0.9`    | 2018-02-18 | adjust the version of blueskyfish-express-commons
 | `0.0.8`    | 2018-01-13 | log db configuration only in Trace log level
 | `0.0.4`    | 2018-01-24 | get database connection from express request.
