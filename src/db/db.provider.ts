@@ -8,7 +8,7 @@
 import { createPool, MysqlError, Pool } from 'mysql';
 import { Log, Util, LogLevel } from 'blueskyfish-express-commons';
 
-import { DB_TAG } from './db.defines';
+import { DB_TAG, NULL_VALUE } from './db.defines';
 import { IDBConfig } from "./db.models";
 import { DBConnection } from './db.connection';
 
@@ -35,6 +35,10 @@ export class DBProvider {
 							if (Array.isArray(item)) {
 								// concat the values with comma separate
 								return item.map((v) => this._pool.escape(v)).join(',');
+							}
+							// 'NULL' is sql NULL :-)
+							if (item === NULL_VALUE) {
+								return NULL_VALUE;
 							}
 							return this._pool.escape(values[key]);
 						}

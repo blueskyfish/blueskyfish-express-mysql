@@ -15,3 +15,5 @@ export const DB_ERR_QUERY_FIRST:     string = 'query.first';
 export const DB_DATE_TIME_PATTERN: string = 'YYYY-MM-DD HH:mm:ss';
 export const DB_DATE_PATTERN: string = 'YYYY-MM-DD';
 export const DB_TIME_PATTERN: string = 'HH:mm:ss';
+
+export const NULL_VALUE: string      = 'NULL';
