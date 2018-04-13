@@ -58,13 +58,13 @@ All libraries from **blueskyfish-express-*** and depended applications should us
 
 | name                    | Version
 |-------------------------|-------------
-| `express`               | `4.16.2`
+| `express`               | `4.16.3`
 | `lodash`                | `4.17.5`
-| `moment`                | `2.20.1`
+| `moment`                | `2.22.0`
 | `mysql`                 | `2.15.0`
 |-------------------------|-------------
-| `mocha`                 | `5.0.1`
-| `ts-node`               | `5.0.0`
+| `mocha`                 | `5.1.0`
+| `ts-node`               | `5.0.1`
 | `typescript`            | `2.6.2`
 
 
