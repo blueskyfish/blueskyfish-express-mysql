@@ -72,7 +72,7 @@ All libraries from **blueskyfish-express-*** and depended applications should us
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
-| `0.0.12`   | 2018-04-13 | adjust the version of the depended node modules.
+| `0.0.13`   | 2018-04-13 | adjust the version of the depended node modules.
 | `0.0.11`   | 2018-03-20 | NULL is a sql NULL
 | `0.0.10`   | 2018-02-22 | adjust the version of the depended node modules.
 | `0.0.9`    | 2018-02-18 | adjust the version of blueskyfish-express-commons
