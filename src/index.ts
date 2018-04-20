@@ -5,6 +5,11 @@
  * Copyright 2018 BlueSkyFish
  */
 
+/**
+ * The current version of the library
+ */
+export const version: string = '0.1.0';
+
 export { IDBConfig} from './db/db.models';
 export {
 	DB_TAG,

@@ -11,8 +11,8 @@ import { DBConnection } from './db.connection';
 /**
  * Returns the database connection from the express request.
  *
- * @param {e.Request} req
- * @return {DBConnection}
+ * @param {e.Request} req a express request.
+ * @return {DBConnection} the database connection
  */
 export function getConnection(req: Request): DBConnection {
 	return (req as any).dbConn;

@@ -11,6 +11,13 @@ import { NextFunction, Request, Response} from 'express';
 import { dbProvider } from './db.provider';
 import { IDBConfig } from "./db.models";
 
+/**
+ * Creates the middleware for a express application. Every request get and has a property `dbConn` with the current
+ * database connection.
+ *
+ * @param {IDBConfig} config the database configuration
+ * @return {RequestHandlerParams} the middleware
+ */
 export function withDB(config: IDBConfig): RequestHandlerParams {
 
 	dbProvider.init(config);

@@ -9,12 +9,22 @@ import { Connection, MysqlError, Pool, PoolConnection } from 'mysql';
 import { BaseError, Log } from 'blueskyfish-express-commons';
 import { DB_ERR_CONNECTION, DB_ERR_QUERY, DB_ERR_QUERY_FIRST, DB_TAG } from './db.defines';
 
+/**
+ * A database connection for a mysql server
+ */
 export class DBConnection {
 
 	private _connection: PoolConnection = null;
 
 	constructor(private _pool: Pool) {}
 
+	/**
+	 * Execute an sql statement and returns in the resolve callback the result of the query.
+	 *
+	 * @param {string} sql the sql statement
+	 * @param {*} [values] the values for the sql statement.
+	 * @return {Promise<*>}
+	 */
 	query(sql: string, values: any = {}): Promise<any> {
 		return this.openConnection()
 			.then(() => {
@@ -32,11 +42,35 @@ export class DBConnection {
 			});
 	}
 
+	/**
+	 * Returns the first element in a select query and if the query has not result an reject is called.
+	 *
+	 * @param {string} sql the select sql statement
+	 * @param {*} [values] the values for the sql statement
+	 * @return {Promise<*>}
+	 */
 	queryFirst(sql: string, values: any = {}): Promise<any> {
 		return this.query(sql, values)
 			.then((result: any) => {
 				if (!Array.isArray(result) || result.length === 0) {
 					return Promise.reject(new BaseError(DB_TAG, DB_ERR_QUERY_FIRST, 'Result is not an array'));
+				}
+				return result[0];
+			});
+	}
+
+	/**
+	 * Returns the first element in a select query and if the query has no result, then it returns null.
+	 *
+	 * @param {string} sql the select sql statement.
+	 * @param {*} [values] the values for the sql statement
+	 * @return {Promise<*>} the first element or null
+	 */
+	querySingleton(sql: string, values: any = {}): Promise<any> {
+		return this.query(sql, values)
+			.then((result: any) => {
+				if (!Array.isArray(result) || result.length === 0) {
+					return null;
 				}
 				return result[0];
 			});
