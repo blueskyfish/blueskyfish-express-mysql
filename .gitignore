@@ -13,3 +13,5 @@ lib/
 
 # Node & Co
 node_modules/
+
+*.log

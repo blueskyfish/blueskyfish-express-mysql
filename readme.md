@@ -7,6 +7,8 @@
 
 A middleware for the express microservices
 
+**Breaking Change** switch to [yarn][yarn].
+
 **Example**
 
 ```js
@@ -72,6 +74,7 @@ All libraries from **blueskyfish-express-*** and depended applications should us
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
+| `0.2.1`    | 2018-05-01 | switch to yarn
 | `0.1.0`    | 2018-04-20 | add querySingleton method. improve the js documentation
 | `0.0.13`   | 2018-04-13 | adjust the version of the depended node modules.
 | `0.0.11`   | 2018-03-20 | NULL is a sql NULL
@@ -112,3 +115,4 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 [express]: https://expressjs.com/
 [node-mysql]: https://github.com/mysqljs/mysql
 [bsf-ec]: https://github.com/blueskyfish/blueskyfish-express-commons
+[yarn]: https://yarnpkg.com/
