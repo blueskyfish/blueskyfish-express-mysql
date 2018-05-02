@@ -74,7 +74,7 @@ All libraries from **blueskyfish-express-*** and depended applications should us
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
-| `0.3.0`    | 2018-05.02 | adjust tsc options
+| `0.3.1`    | 2018-05.02 | adjust tsc options
 | `0.2.1`    | 2018-05-01 | switch to yarn
 | `0.1.0`    | 2018-04-20 | add querySingleton method. improve the js documentation
 | `0.0.13`   | 2018-04-13 | adjust the version of the depended node modules.
