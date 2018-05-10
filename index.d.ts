@@ -28,13 +28,6 @@ declare namespace e {
 	}
 
 	const DB_TAG: string;
-	const DB_ERR_CONNECTION:      string;
-	const DB_ERR_QUERY:           string;
-	const DB_ERR_QUERY_FIRST:     string;
-	// Moment Date Time Pattern
-	const DB_DATE_TIME_PATTERN:   string;
-	const DB_DATE_PATTERN:        string;
-	const DB_TIME_PATTERN:        string;
 
 	class DBConnection {
 		constructor(pool: Pool);

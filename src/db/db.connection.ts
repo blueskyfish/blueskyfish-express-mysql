@@ -5,9 +5,18 @@
  * Copyright 2018 BlueSkyFish
  */
 
-import { Connection, MysqlError, Pool, PoolConnection } from 'mysql';
-import { BaseError, Log } from 'blueskyfish-express-commons';
-import { DB_ERR_CONNECTION, DB_ERR_QUERY, DB_ERR_QUERY_FIRST, DB_TAG } from './db.defines';
+import {
+	Connection,
+	MysqlError,
+	Pool,
+	PoolConnection
+} from 'mysql';
+import {
+	BaseError,
+	Log,
+	Util
+} from 'blueskyfish-express-commons';
+import { DB_TAG } from './db.defines';
 
 /**
  * A database connection for a mysql server
@@ -34,7 +43,7 @@ export class DBConnection {
 							Log.warn(DB_TAG, 'Query Error: %s -> %s', err.errno, err.message);
 							Log.warn(DB_TAG, 'Sql:\n%s', err.sql);
 							Log.warn(DB_TAG, 'Stack: \n%s', err.stack);
-							reject(new BaseError(DB_TAG, DB_ERR_QUERY, 'Query has an error!'));
+							reject(new BaseError(DB_TAG, `query.${Util.adjustAndLower(err.code, '.')}`, `Query has an error! ${err.message}`));
 						}
 						resolve(result);
 					});
@@ -53,7 +62,7 @@ export class DBConnection {
 		return this.query(sql, values)
 			.then((result: any) => {
 				if (!Array.isArray(result) || result.length === 0) {
-					return Promise.reject(new BaseError(DB_TAG, DB_ERR_QUERY_FIRST, 'Result is not an array'));
+					return Promise.reject(new BaseError(DB_TAG, 'query.first', 'Result is not an array'));
 				}
 				return result[0];
 			});
@@ -152,7 +161,7 @@ export class DBConnection {
 			this._pool.getConnection(((err: MysqlError, connection: PoolConnection) => {
 				if (err) {
 					Log.warn(DB_TAG, 'Conn Error: %s -> %s', err.errno, err.message);
-					reject(new BaseError(DB_TAG, DB_ERR_CONNECTION,
+					reject(new BaseError(DB_TAG, `conn.${Util.adjustAndLower(err.code, '.')}`,
 						err.message ? err.message : 'Could not connect to database'));
 				}
 				resolve(connection);

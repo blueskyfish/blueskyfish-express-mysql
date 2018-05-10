@@ -37,6 +37,7 @@ app.get('/users', async (req, res) => {
 ## Requirements
 
 * [NodeJS][nodejs] Version 8.x or higher.
+* [Yarn][yarn]
 * [Typescript][typescript] Version 2.6.2 or higher.
 * [Express][express] Version 4.16 or higher
 * [Node MySQL][node-mysql] Version 2.15.0 or higher.
@@ -74,6 +75,7 @@ All libraries from **blueskyfish-express-*** and depended applications should us
 
 | Version    | Date       | Description
 |------------|:----------:|--------------------------------------------
+| `0.3.2`    | 2018-05-10 | improve db error message. clean unused constants
 | `0.3.1`    | 2018-05.02 | adjust tsc options
 | `0.2.1`    | 2018-05-01 | switch to yarn
 | `0.1.0`    | 2018-04-20 | add querySingleton method. improve the js documentation
